@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	 <meta name="description" content="Model of the environmental fate of engineered nanoparticles.">
+    
+    <meta name="author" content="CEH" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>spcFineSediment.f08 &ndash; NanoFASE</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">NanoFASE </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+				
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+		 aria-expanded="false">Contents <span class="caret"></span></a>
+	      <ul class="dropdown-menu">
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+				
+				
+            <li><a href="../lists/modules.html">Modules</a></li>
+				
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+				
+				
+            <li><a href="../lists/absint.html">Abstract Interfaces</a></li>
+								
+            <li><a href="../lists/types.html">Derived Types</a></li>
+				
+				
+            <li><a href="../program/main.html">Program</a></li>
+	    
+            </ul>
+            </li>
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/absint.html">Abstract Interfaces</a></li>
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/main.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>spcFineSediment.f08
+    <small>Source File</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+	  data-placement="bottom" data-html="true"
+	  title=" 3.2% of total for source files.">96 statements</a>
+     </li> 
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/spcFineSediment.f08"> Source File</a></li>
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+     <li class="active">spcFineSediment.f08</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-0">Modules</a></h3></div>
+  <div id="mods-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/spcfinesediment.html">spcFineSediment</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/spcfinesediment.f08.html#src">spcFineSediment.f08</a>
+  </div>
+</div>
+
+
+  <hr>
+  
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allfiles-0">All Source Files</a></h3></div>
+  <div id="allfiles-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../sourcefile/classbedsediment1.f08.html">classBedSediment1.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classbedsediment2.f08.html">classBedSediment2.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classbedsedimentlayer1.f08.html">classBedSedimentLayer1.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classbiota1.f08.html">classBiota1.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classbiota2.f08.html">classBiota2.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classdatabase.f08.html">classDatabase.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classdiffusesource.f08.html">classDiffuseSource.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classenvironment1.f08.html">classEnvironment1.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classfinesediment1.f08.html">classFineSediment1.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classgridcell1.f08.html">classGridCell1.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classpointsource.f08.html">classPointSource.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classreactor1.f08.html">classReactor1.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classreactor2.f08.html">classReactor2.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classriverreach1.f08.html">classRiverReach1.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classsoilprofile1.f08.html">classSoilProfile1.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classsubriver1.f08.html">classSubRiver1.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/globals.f08.html">Globals.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/main.f08.html">main.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/spcbedsediment.f08.html">spcBedSediment.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/spcbedsedimentlayer.f08.html">spcBedSedimentLayer.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/spcbiota.f08.html">spcBiota.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/spcenvironment.f08.html">spcEnvironment.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/spcfinesediment.f08.html">spcFineSediment.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/spcgridcell.f08.html">spcGridCell.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/spcreactor.f08.html">spcReactor.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/spcriverreach.f08.html">spcRiverReach.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/spcsoillayer.f08.html">spcSoilLayer.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/spcsoilprofile.f08.html">spcSoilProfile.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/spcsubriver.f08.html">spcSubRiver.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/utilmodule.f08.html">UtilModule.f08</a>
+      
+    </div>
+  </div>
+</div>
+
+
+</div>  
+
+    </div>
+    <div class="col-md-9" id='text'>
+    
+    
+      
+      
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-1">Modules</a></h3></div>
+  <div id="mods-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/spcfinesediment.html">spcFineSediment</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/spcfinesediment.f08.html#src">spcFineSediment.f08</a>
+  </div>
+</div>
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    <section>
+      <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl"><pre><span></span><a name="ln-1"></a><span class="c">!&gt; abstract superclass definition for FineSediment</span>
+<a name="ln-2"></a><span class="c">!! defines the properties and methods shared by all BedSedimentLayer objects</span>
+<a name="ln-3"></a><span class="c">!! objects of this class cannot be instantiated, only objects of its subclasses</span>
+<a name="ln-4"></a><span class="k">module </span><span class="n">spcFineSediment</span>
+<a name="ln-5"></a>    <span class="k">use </span><span class="n">Globals</span>
+<a name="ln-6"></a>    <span class="k">use </span><span class="n">netcdf</span>                                                      <span class="c">! input/output handling</span>
+<a name="ln-7"></a>    <span class="k">use </span><span class="n">mo_netcdf</span>                                                   <span class="c">! input/output handling</span>
+<a name="ln-8"></a>    <span class="k">use </span><span class="n">ResultModule</span>                                                <span class="c">! error handling classes, required for</span>
+<a name="ln-9"></a>    <span class="k">use </span><span class="n">ErrorInstanceModule</span>                                         <span class="c">! generation of trace error messages</span>
+<a name="ln-10"></a>    <span class="k">implicit none</span>                                                   <span class="c">! force declaration of all variables</span>
+<a name="ln-11"></a>    <span class="k">type</span><span class="p">,</span> <span class="k">abstract</span><span class="p">,</span> <span class="k">public</span> <span class="kd">::</span> <span class="n">FineSediment</span>                          <span class="c">!! type declaration for superclass</span>
+<a name="ln-12"></a>        <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span> <span class="kd">::</span> <span class="n">name</span>                                  <span class="c">!! a name for the object</span>
+<a name="ln-13"></a>        <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">M_f_l</span>                                           <span class="c">!! fine sediment mass [kg m-2]</span>
+<a name="ln-14"></a>        <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">V_w_l</span>                                           <span class="c">!! LOCAL volume of water associated with fine sediment [m3 m-2]</span>
+<a name="ln-15"></a>        <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">f_comp</span><span class="p">(:)</span>                          <span class="c">!! fractional composition [-]</span>
+<a name="ln-16"></a>        <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">pd_comp_l</span><span class="p">(:)</span>                       <span class="c">!! LOCAL storage of fractional particle densities [kg m-3]</span>
+<a name="ln-17"></a>        <span class="kt">integer</span> <span class="kd">::</span> <span class="n">NFComp</span>                                           <span class="c">!! LOCAL number of fractional composition terms</span>
+<a name="ln-18"></a>
+<a name="ln-19"></a>      <span class="k">contains</span>
+<a name="ln-20"></a>                                                                    <span class="c">! deferred methods: must be defined in all subclasses</span>
+<a name="ln-21"></a>        <span class="k">procedure</span><span class="p">(</span><span class="n">createFineSediment</span><span class="p">),</span> <span class="k">deferred</span> <span class="kd">::</span> <span class="n">create</span>           <span class="c">! sets up by reading variables required for computations</span>
+<a name="ln-22"></a>        <span class="k">procedure</span><span class="p">(</span><span class="n">setFSVol</span><span class="p">),</span> <span class="k">deferred</span> <span class="kd">::</span> <span class="n">SetV</span>                       <span class="c">! set properties by assigning a fine sediment volume</span>
+<a name="ln-23"></a>        <span class="k">procedure</span><span class="p">(</span><span class="n">setFSMass</span><span class="p">),</span> <span class="k">deferred</span> <span class="kd">::</span> <span class="n">SetM</span>                      <span class="c">! set properties by assigning a fine sediment mass</span>
+<a name="ln-24"></a>        <span class="k">procedure</span><span class="p">(</span><span class="n">getFSVol</span><span class="p">),</span> <span class="k">deferred</span> <span class="kd">::</span> <span class="n">V_f</span>                        <span class="c">! returns the fine sediment volume [m3 m-2]</span>
+<a name="ln-25"></a>        <span class="k">procedure</span><span class="p">(</span><span class="n">getFSMass</span><span class="p">),</span> <span class="k">deferred</span> <span class="kd">::</span> <span class="n">M_f</span>                       <span class="c">! returns the fine sediment mass [kg m-2]</span>
+<a name="ln-26"></a>        <span class="k">procedure</span><span class="p">(</span><span class="n">getWVol</span><span class="p">),</span> <span class="k">deferred</span> <span class="kd">::</span> <span class="n">V_w</span>                         <span class="c">! returns the water volume [kg m-2]</span>
+<a name="ln-27"></a>        <span class="k">procedure</span><span class="p">(</span><span class="n">pdens</span><span class="p">),</span> <span class="k">deferred</span> <span class="kd">::</span> <span class="n">rho_part</span>                      <span class="c">! returns the fine sediment particle density [kg m-3]</span>
+<a name="ln-28"></a>        <span class="k">procedure</span><span class="p">(</span><span class="n">audit_fcomp</span><span class="p">),</span> <span class="k">deferred</span> <span class="kd">::</span> <span class="n">audit_comp</span>              <span class="c">! audits the fractional composition</span>
+<a name="ln-29"></a>        <span class="k">procedure</span><span class="p">(</span><span class="n">Empty</span><span class="p">),</span> <span class="k">deferred</span> <span class="kd">::</span> <span class="n">IsEmpty</span>                       <span class="c">! check for presence of sediment and water</span>
+<a name="ln-30"></a>        <span class="k">procedure</span><span class="p">(</span><span class="n">ClearAll</span><span class="p">),</span> <span class="k">deferred</span> <span class="kd">::</span> <span class="n">Clear</span>                      <span class="c">! clear all fine sediment and water from the object</span>
+<a name="ln-31"></a>                                                                    <span class="c">! non-deferred methods: defined here. Can be overwritten in subclasses</span>
+<a name="ln-32"></a>    <span class="k">end type</span>
+<a name="ln-33"></a><span class="k">    abstract interface</span>
+<a name="ln-34"></a>        <span class="c">!&gt; initialise this object</span>
+<a name="ln-35"></a>        <span class="k">function </span><span class="n">createFineSediment</span><span class="p">(</span><span class="n">Me</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">pd_comp_in</span><span class="p">)</span> <span class="p">&amp;</span>
+<a name="ln-36"></a>            <span class="k">result</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+<a name="ln-37"></a>            <span class="k">use </span><span class="n">Globals</span>
+<a name="ln-38"></a>            <span class="k">import </span><span class="n">FineSediment</span><span class="p">,</span> <span class="k">Result</span>
+<a name="ln-39"></a><span class="k">            class</span><span class="p">(</span><span class="n">FineSediment</span><span class="p">)</span> <span class="kd">::</span> <span class="n">Me</span>                                <span class="c">!! self-reference</span>
+<a name="ln-40"></a>            <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span> <span class="kd">::</span> <span class="n">n</span>                                  <span class="c">!! a name for the object</span>
+<a name="ln-41"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">pd_comp_in</span><span class="p">(:)</span>       <span class="c">!! input array of particle densities for compositional fractions</span>
+<a name="ln-42"></a>            <span class="k">type</span><span class="p">(</span><span class="k">Result</span><span class="p">)</span> <span class="kd">::</span> <span class="n">r</span>                                        <span class="c">!! Result object</span>
+<a name="ln-43"></a>        <span class="k">end function</span>
+<a name="ln-44"></a>        <span class="c">!&gt; set the properties, using fine sediment volume [m3 m-2]</span>
+<a name="ln-45"></a>        <span class="k">function </span><span class="n">setFSVol</span><span class="p">(</span><span class="n">Me</span><span class="p">,</span> <span class="n">Vf_in</span><span class="p">,</span> <span class="n">Vw_in</span><span class="p">,</span> <span class="n">f_comp_in</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+<a name="ln-46"></a>            <span class="k">use </span><span class="n">Globals</span>
+<a name="ln-47"></a>            <span class="k">import </span><span class="n">FineSediment</span><span class="p">,</span> <span class="k">Result</span>
+<a name="ln-48"></a><span class="k">            class</span><span class="p">(</span><span class="n">FineSediment</span><span class="p">)</span> <span class="kd">::</span> <span class="n">Me</span>                               <span class="c">!! self-reference</span>
+<a name="ln-49"></a>            <span class="k">type</span><span class="p">(</span><span class="k">Result</span><span class="p">)</span> <span class="kd">::</span> <span class="n">r</span>                                       <span class="c">!! Result object</span>
+<a name="ln-50"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">optional</span> <span class="kd">::</span> <span class="n">Vf_in</span>                             <span class="c">!! the fine sediment volume</span>
+<a name="ln-51"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">optional</span> <span class="kd">::</span> <span class="n">Vw_in</span>                             <span class="c">!! the water volume</span>
+<a name="ln-52"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">optional</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">f_comp_in</span><span class="p">(:)</span>         <span class="c">!! input fractional composition. Optional; if not present, stored composition is used</span>
+<a name="ln-53"></a>         <span class="k">end function</span>
+<a name="ln-54"></a>        <span class="c">!&gt; set the properties, using fine sediment mass [kg m-2]</span>
+<a name="ln-55"></a>        <span class="k">function </span><span class="n">setFSMass</span><span class="p">(</span><span class="n">Me</span><span class="p">,</span> <span class="n">Mf_in</span><span class="p">,</span> <span class="n">Vw_in</span><span class="p">,</span> <span class="n">f_comp_in</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+<a name="ln-56"></a>            <span class="k">use </span><span class="n">Globals</span>
+<a name="ln-57"></a>            <span class="k">import </span><span class="n">FineSediment</span><span class="p">,</span> <span class="k">Result</span>
+<a name="ln-58"></a><span class="k">            class</span><span class="p">(</span><span class="n">FineSediment</span><span class="p">)</span> <span class="kd">::</span> <span class="n">Me</span>                               <span class="c">!! self-reference</span>
+<a name="ln-59"></a>            <span class="k">type</span><span class="p">(</span><span class="k">Result</span><span class="p">)</span> <span class="kd">::</span> <span class="n">r</span>                                       <span class="c">!! Result object</span>
+<a name="ln-60"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">optional</span> <span class="kd">::</span> <span class="n">Mf_in</span>                             <span class="c">!! the fine sediment mass</span>
+<a name="ln-61"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">optional</span> <span class="kd">::</span> <span class="n">Vw_in</span>                             <span class="c">!! the water volume</span>
+<a name="ln-62"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">optional</span><span class="p">,</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">f_comp_in</span><span class="p">(:)</span>         <span class="c">!! input fractional composition. Optional; if not present, stored composition is used</span>
+<a name="ln-63"></a>        <span class="k">end function</span>
+<a name="ln-64"></a>        <span class="c">!&gt; return the fine sediment volume [m3 m-2]</span>
+<a name="ln-65"></a>        <span class="k">function </span><span class="n">getFSVol</span><span class="p">(</span><span class="n">Me</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">Vf</span><span class="p">)</span>
+<a name="ln-66"></a>            <span class="k">use </span><span class="n">Globals</span>
+<a name="ln-67"></a>            <span class="k">import </span><span class="n">FineSediment</span>
+<a name="ln-68"></a>            <span class="k">class</span><span class="p">(</span><span class="n">FineSediment</span><span class="p">)</span> <span class="kd">::</span> <span class="n">Me</span>                               <span class="c">!! self-reference</span>
+<a name="ln-69"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">Vf</span>                                          <span class="c">!! the return value</span>
+<a name="ln-70"></a>        <span class="k">end function</span>
+<a name="ln-71"></a>        <span class="c">!&gt; return the fine sediment mass [kg m-2]</span>
+<a name="ln-72"></a>        <span class="k">function </span><span class="n">getFSMass</span><span class="p">(</span><span class="n">Me</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">Mf</span><span class="p">)</span>
+<a name="ln-73"></a>            <span class="k">use </span><span class="n">Globals</span>
+<a name="ln-74"></a>            <span class="k">import </span><span class="n">FineSediment</span>
+<a name="ln-75"></a>            <span class="k">class</span><span class="p">(</span><span class="n">FineSediment</span><span class="p">)</span> <span class="kd">::</span> <span class="n">Me</span>                               <span class="c">!! self-reference</span>
+<a name="ln-76"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">Mf</span>                                          <span class="c">!! the return value</span>
+<a name="ln-77"></a>        <span class="k">end function</span>
+<a name="ln-78"></a>        <span class="c">!&gt; return the water volume [m3 m-2]</span>
+<a name="ln-79"></a>        <span class="k">function </span><span class="n">getWVol</span><span class="p">(</span><span class="n">Me</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">Vw</span><span class="p">)</span>
+<a name="ln-80"></a>            <span class="k">use </span><span class="n">Globals</span>
+<a name="ln-81"></a>            <span class="k">import </span><span class="n">FineSediment</span>
+<a name="ln-82"></a>            <span class="k">class</span><span class="p">(</span><span class="n">FineSediment</span><span class="p">)</span> <span class="kd">::</span> <span class="n">Me</span>                               <span class="c">!! self-reference</span>
+<a name="ln-83"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">Vw</span>                                          <span class="c">!! the return value</span>
+<a name="ln-84"></a>        <span class="k">end function</span>
+<a name="ln-85"></a>        <span class="c">!&gt; return the particle density [kg m-3]</span>
+<a name="ln-86"></a>        <span class="k">function </span><span class="n">pdens</span><span class="p">(</span><span class="n">Me</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">rp</span><span class="p">)</span>
+<a name="ln-87"></a>            <span class="k">use </span><span class="n">Globals</span>
+<a name="ln-88"></a>            <span class="k">import </span><span class="n">FineSediment</span>
+<a name="ln-89"></a>            <span class="k">class</span><span class="p">(</span><span class="n">FineSediment</span><span class="p">)</span> <span class="kd">::</span> <span class="n">Me</span>                               <span class="c">!! self-reference</span>
+<a name="ln-90"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">rp</span>                                          <span class="c">!! return value: the particle density [kg m-3]</span>
+<a name="ln-91"></a>        <span class="k">end function</span>
+<a name="ln-92"></a>        <span class="c">!&gt; audit the fractional composition</span>
+<a name="ln-93"></a>        <span class="k">function </span><span class="n">Audit_fcomp</span><span class="p">(</span><span class="n">Me</span><span class="p">)</span>
+<a name="ln-94"></a>            <span class="k">use </span><span class="n">Globals</span>
+<a name="ln-95"></a>            <span class="k">import </span><span class="n">FineSediment</span>
+<a name="ln-96"></a>            <span class="k">class</span><span class="p">(</span><span class="n">FineSediment</span><span class="p">)</span> <span class="kd">::</span> <span class="n">Me</span>                                <span class="c">!! self-reference</span>
+<a name="ln-97"></a>            <span class="kt">integer</span> <span class="kd">::</span> <span class="n">F</span>                                             <span class="c">! LOCAL loop counter</span>
+<a name="ln-98"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">t_fcomp</span>                                      <span class="c">! LOCAL sum of fractional compositions</span>
+<a name="ln-99"></a>        <span class="k">end function</span>
+<a name="ln-100"></a>        <span class="c">!&gt; check whether this object contains any fine sediment or water of the specified size class</span>
+<a name="ln-101"></a>        <span class="k">function </span><span class="n">Empty</span><span class="p">(</span><span class="n">Me</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<a name="ln-102"></a>            <span class="k">import </span><span class="n">FineSediment</span>
+<a name="ln-103"></a>            <span class="k">class</span><span class="p">(</span><span class="n">FineSediment</span><span class="p">)</span> <span class="kd">::</span> <span class="n">Me</span>                                <span class="c">!! self-reference</span>
+<a name="ln-104"></a>            <span class="kt">logical</span> <span class="kd">::</span> <span class="n">t</span>                                             <span class="c">! return value. True= V_f/M_f = V_w = 0. False= V_f/M_f &gt; 0 .or. V_w &gt; 0</span>
+<a name="ln-105"></a>        <span class="k">end function</span>
+<a name="ln-106"></a>        <span class="c">!&gt; clear all fine sediment and water from the object</span>
+<a name="ln-107"></a>        <span class="k">subroutine </span><span class="n">ClearAll</span><span class="p">(</span><span class="n">Me</span><span class="p">)</span>
+<a name="ln-108"></a>            <span class="k">import </span><span class="n">FineSediment</span>
+<a name="ln-109"></a>            <span class="k">class</span><span class="p">(</span><span class="n">FineSediment</span><span class="p">)</span> <span class="kd">::</span> <span class="n">Me</span>                                <span class="c">!! self-reference</span>
+<a name="ln-110"></a>            <span class="kt">integer</span> <span class="kd">::</span> <span class="n">X</span>                                             <span class="c">! LOCAL loop counter</span>
+<a name="ln-111"></a>        <span class="k">end subroutine</span>
+<a name="ln-112"></a><span class="k">    end interface</span>
+<a name="ln-113"></a><span class="k">end module</span>
+</pre></div>
+
+    </section>
+    </div>
+  </div>
+
+  <section class="visible-xs visible-sm hidden-md">
+    <hr>
+    
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allfiles-1">All Source Files</a></h3></div>
+  <div id="allfiles-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../sourcefile/classbedsediment1.f08.html">classBedSediment1.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classbedsediment2.f08.html">classBedSediment2.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classbedsedimentlayer1.f08.html">classBedSedimentLayer1.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classbiota1.f08.html">classBiota1.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classbiota2.f08.html">classBiota2.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classdatabase.f08.html">classDatabase.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classdiffusesource.f08.html">classDiffuseSource.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classenvironment1.f08.html">classEnvironment1.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classfinesediment1.f08.html">classFineSediment1.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classgridcell1.f08.html">classGridCell1.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classpointsource.f08.html">classPointSource.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classreactor1.f08.html">classReactor1.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classreactor2.f08.html">classReactor2.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classriverreach1.f08.html">classRiverReach1.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classsoilprofile1.f08.html">classSoilProfile1.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/classsubriver1.f08.html">classSubRiver1.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/globals.f08.html">Globals.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/main.f08.html">main.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/spcbedsediment.f08.html">spcBedSediment.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/spcbedsedimentlayer.f08.html">spcBedSedimentLayer.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/spcbiota.f08.html">spcBiota.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/spcenvironment.f08.html">spcEnvironment.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/spcfinesediment.f08.html">spcFineSediment.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/spcgridcell.f08.html">spcGridCell.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/spcreactor.f08.html">spcReactor.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/spcriverreach.f08.html">spcRiverReach.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/spcsoillayer.f08.html">spcSoilLayer.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/spcsoilprofile.f08.html">spcSoilProfile.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/spcsubriver.f08.html">spcSubRiver.f08</a>
+      
+      <a class="list-group-item" href="../sourcefile/utilmodule.f08.html">UtilModule.f08</a>
+      
+    </div>
+  </div>
+</div>
+
+
+  </section>
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2017 </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> NanoFASE was developed by CEH</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': { 
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>

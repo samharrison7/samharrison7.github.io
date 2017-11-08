@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	 <meta name="description" content="Model of the environmental fate of engineered nanoparticles.">
+    
+    <meta name="author" content="CEH" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>BedSediment &ndash; NanoFASE </title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">NanoFASE </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+				
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+		 aria-expanded="false">Contents <span class="caret"></span></a>
+	      <ul class="dropdown-menu">
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+				
+				
+            <li><a href="../lists/modules.html">Modules</a></li>
+				
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+				
+				
+            <li><a href="../lists/absint.html">Abstract Interfaces</a></li>
+								
+            <li><a href="../lists/types.html">Derived Types</a></li>
+				
+				
+            <li><a href="../program/main.html">Program</a></li>
+	    
+            </ul>
+            </li>
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/absint.html">Abstract Interfaces</a></li>
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/main.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>BedSediment
+    <small>Derived Type</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+	  data-placement="bottom" data-html="true"
+	  title="<p> 4.7% of total for derived types.</p>Including implementation: 79 statements,  3.5% of total for derived types.">19 statements</a>
+     </li> 
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/spcBedSediment.f08"> Source File</a></li>
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+     <li><a href='../sourcefile/spcbedsediment.f08.html'>spcBedSediment.f08</a></li>
+  
+     <li><a href='../module/spcbedsediment.html'>spcBedSediment</a></li>
+  
+     <li class="active">BedSediment</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../type/bedsediment.html#variable-name%7E6">name</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#variable-colbedsedimentlayers">colBedSedimentLayers</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#variable-nsizeclasses%7E2">nSizeClasses</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#variable-nlayers">nLayers</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#variable-nfcomp%7E3">nfComp</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#variable-allst%7E5">allst</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#boundprocs-0">Type-Bound Procedures</a></h3></div>
+  <div id="boundprocs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../type/bedsediment.html#boundprocedure-create%7E23">create</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#boundprocedure-destroy%7E24">destroy</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#boundprocedure-deposit%7E2">deposit</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#boundprocedure-resuspend%7E2">resuspend</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#boundprocedure-af_sediment">Af_sediment</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#boundprocedure-cf_sediment">Cf_sediment</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#boundprocedure-aw_sediment">Aw_sediment</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#boundprocedure-cw_sediment">Cw_sediment</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#boundprocedure-mf_sediment">Mf_sediment</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#boundprocedure-mf_sed_all">Mf_sed_all</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+  <hr>
+  
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#alltypes-0">All Derived Types</a></h3></div>
+  <div id="alltypes-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../type/bedsediment.html">BedSediment</a>
+      
+      <a class="list-group-item" href="../type/bedsediment1.html">BedSediment1</a>
+      
+      <a class="list-group-item" href="../type/bedsediment2.html">BedSediment2</a>
+      
+      <a class="list-group-item" href="../type/bedsedimentlayer.html">BedSedimentLayer</a>
+      
+      <a class="list-group-item" href="../type/bedsedimentlayer1.html">BedSedimentLayer1</a>
+      
+      <a class="list-group-item" href="../type/bedsedimentlayerelement.html">BedSedimentLayerElement</a>
+      
+      <a class="list-group-item" href="../type/biota.html">Biota</a>
+      
+      <a class="list-group-item" href="../type/constants.html">Constants</a>
+      
+      <a class="list-group-item" href="../type/database.html">Database</a>
+      
+      <a class="list-group-item" href="../type/diffusesource.html">DiffuseSource</a>
+      
+      <a class="list-group-item" href="../type/diffusesourceelement.html">DiffuseSourceElement</a>
+      
+      <a class="list-group-item" href="../type/environment.html">Environment</a>
+      
+      <a class="list-group-item" href="../type/environment1.html">Environment1</a>
+      
+      <a class="list-group-item" href="../type/finesediment.html">FineSediment</a>
+      
+      <a class="list-group-item" href="../type/finesediment1.html">FineSediment1</a>
+      
+      <a class="list-group-item" href="../type/finesedimentelement.html">FineSedimentElement</a>
+      
+      <a class="list-group-item" href="../type/gridcell.html">GridCell</a>
+      
+      <a class="list-group-item" href="../type/gridcell1.html">GridCell1</a>
+      
+      <a class="list-group-item" href="../type/gridcellelement.html">GridCellElement</a>
+      
+      <a class="list-group-item" href="../type/objbiota1.html">objBiota1</a>
+      
+      <a class="list-group-item" href="../type/objbiota2.html">objBiota2</a>
+      
+      <a class="list-group-item" href="../type/objreactor1.html">objReactor1</a>
+      
+      <a class="list-group-item" href="../type/objreactor2.html">objReactor2</a>
+      
+      <a class="list-group-item" href="../type/pointsource.html">PointSource</a>
+      
+      <a class="list-group-item" href="../type/pointsourceelement.html">PointSourceElement</a>
+      
+      <a class="list-group-item" href="../type/reactor.html">Reactor</a>
+      
+      <a class="list-group-item" href="../type/riverreach.html">RiverReach</a>
+      
+      <a class="list-group-item" href="../type/riverreach1.html">RiverReach1</a>
+      
+      <a class="list-group-item" href="../type/riverreachelement.html">RiverReachElement</a>
+      
+      <a class="list-group-item" href="../type/routingref.html">RoutingRef</a>
+      
+      <a class="list-group-item" href="../type/soillayer.html">SoilLayer</a>
+      
+      <a class="list-group-item" href="../type/soillayerelement.html">SoilLayerElement</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html">SoilProfile</a>
+      
+      <a class="list-group-item" href="../type/soilprofile1.html">SoilProfile1</a>
+      
+      <a class="list-group-item" href="../type/soilprofileelement.html">SoilProfileElement</a>
+      
+      <a class="list-group-item" href="../type/subriver.html">SubRiver</a>
+      
+      <a class="list-group-item" href="../type/subriver1.html">SubRiver1</a>
+      
+      <a class="list-group-item" href="../type/subriverelement.html">SubRiverElement</a>
+      
+      <a class="list-group-item" href="../type/subriverpointer.html">SubRiverPointer</a>
+      
+    </div>
+  </div>
+</div>
+
+
+</div>  
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public, abstract :: BedSediment</h2>
+    
+    
+    
+    
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../type/bedsediment.html#variable-name%7E6">name</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#variable-colbedsedimentlayers">colBedSedimentLayers</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#variable-nsizeclasses%7E2">nSizeClasses</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#variable-nlayers">nLayers</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#variable-nfcomp%7E3">nfComp</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#variable-allst%7E5">allst</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#boundprocs-1">Type-Bound Procedures</a></h3></div>
+  <div id="boundprocs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../type/bedsediment.html#boundprocedure-create%7E23">create</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#boundprocedure-destroy%7E24">destroy</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#boundprocedure-deposit%7E2">deposit</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#boundprocedure-resuspend%7E2">resuspend</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#boundprocedure-af_sediment">Af_sediment</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#boundprocedure-cf_sediment">Cf_sediment</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#boundprocedure-aw_sediment">Aw_sediment</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#boundprocedure-cw_sediment">Cw_sediment</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#boundprocedure-mf_sediment">Mf_sediment</a>
+      
+      <a class="list-group-item" href="../type/bedsediment.html#boundprocedure-mf_sed_all">Mf_sed_all</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+    <section>
+    <h2>Components</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-name%7E6"></span>character(len=256),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>name</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-colbedsedimentlayers"></span>class(<a href='../type/bedsedimentlayerelement.html'>BedSedimentLayerElement</a>),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>colBedSedimentLayers</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nsizeclasses%7E2"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nSizeClasses</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nlayers"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nLayers</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nfcomp%7E3"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nfComp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-allst%7E5"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>allst</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+     
+    <section>
+    <h2>Type-Bound Procedures</h2>
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-create%7E23"></span><h3>procedure(<a href='../interface/createbedsediment.html'>createBedSediment</a>), public, deferred :: <strong>create</strong>  
+    
+  </h3></div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+         
+            
+    
+    <h3>
+function <a href='../interface/createbedsediment.html'>createBedSediment</a>(Me, n, ln, nsc, nl, bslType, C_tot, f_comp, pd_comp, Porosity, V_f, M_f) result(r)
+    
+    
+	 
+<small>Prototype</small></h3>
+    
+
+
+
+
+
+
+
+<p>Create a BedSediment object.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/bedsediment.html'>BedSediment</a>)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>Me</strong></td><td><p>self-reference</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=256),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>a name for the object</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=256),</td>
+  <td></td>
+  <td></td>
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>ln</strong>(:)</td><td><p>names for the layers. Index = layer</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nsc</strong></td><td><p>the number of particle size classes</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nl</strong></td><td><p>the number of layers</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>bslType</strong></td><td><p>the type identification number of the BedSedimentLayer(s)</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>C_tot</strong>(:)</td><td><p>the total volume of each layer. Index = layer</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>f_comp</strong>(:,:,:)</td><td><p>set of fractional compositions
+ Index 1 = size class, Index 2 = compositional fraction, Index 3 = layer</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>pd_comp</strong>(:)</td><td><p>set of fractional particle densities
+ Index 1 = size class</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>Porosity</strong>(:)</td><td><p>layer porosity, if being used to define layer
+ Index 1 = layer</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>V_f</strong>(:,:)</td><td><p>set of fine sediment volumes, if being used to define layers
+ Index 1 = size class, Index 2 = layer</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>M_f</strong>(:,:)</td><td><p>set of fine sediment masses, if being used to define layers
+ Index 1 = size class, Index 2 = layer</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>type(Result)
+  </small></h4>
+  <p>returned Result object</p>
+    
+
+         
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-destroy%7E24"></span><h3>procedure(<a href='../interface/destroybedsediment.html'>destroyBedSediment</a>), public, deferred :: <strong>destroy</strong>  
+    
+  </h3></div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+         
+            
+    
+    <h3>
+function <a href='../interface/destroybedsediment.html'>destroyBedSediment</a>(Me) result(r)
+    
+    
+	 
+<small>Prototype</small></h3>
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/bedsediment.html'>BedSediment</a>)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>Me</strong></td><td><p>self-reference</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>type(Result)
+  </small></h4>
+  <p>returned Result object</p>
+    
+
+         
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-deposit%7E2"></span><h3>procedure(<a href='../interface/depositsediment.html'>depositSediment</a>), public, deferred :: <strong>deposit</strong>  
+    
+  </h3></div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+         
+            
+    
+    <h3>
+function <a href='../interface/depositsediment.html'>depositSediment</a>(Me, M_dep, f_comp_dep, V_w_tot) result(r)
+    
+    
+	 
+<small>Prototype</small></h3>
+    
+
+
+
+
+
+
+
+<p>compute deposition to bed sediment, including burial and downward shifting of fine sediment and water</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/bedsediment.html'>BedSediment</a>)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>Me</strong></td><td><p>self-reference</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>M_dep</strong>(:)</td><td><p>Depositing sediment mass by size class</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>f_comp_dep</strong>(:,:)</td><td><p>Depositing sediment fractional composition by size class
+ Index 1 = size class, Index 2 = compositional fraction</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>V_w_tot</strong></td><td><p>water requirement from the water column [m3 m-2]</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>type(Result)
+  </small></h4>
+  <p>returned Result object                                       ! returned Result object</p>
+    
+
+         
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-resuspend%7E2"></span><h3>procedure(<a href='../interface/resuspendsediment.html'>resuspendSediment</a>), public, deferred :: <strong>resuspend</strong>  
+    
+  </h3></div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+         
+            
+    
+    <h3>
+function <a href='../interface/resuspendsediment.html'>resuspendSediment</a>(Me, M_resusp, FS) result(r)
+    
+    
+	 
+<small>Prototype</small></h3>
+    
+
+
+
+
+
+
+
+<p>compute resuspension from bed sediment</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/bedsediment.html'>BedSediment</a>)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>Me</strong></td><td><p>self-reference</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>M_resusp</strong>(:)</td><td><p>array of sediment masses to be resuspended [kg m-2]. Index = size class[1,...,S]</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(FineSediment1),</td>
+  <td>intent(out),</td>
+  <td></td>
+  
+  <td>allocatable</td><td>::</td>
+  <td><strong>FS</strong>(:,:)</td><td><p>array returning resuspended fine sediment. Index 1 = size class, Index 2 = layer</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>type(Result)
+  </small></h4>
+  <p>returned Result object</p>
+    
+
+         
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-af_sediment"></span><h3>procedure, public :: <strong>Af_sediment</strong>  => <a href='../proc/get_af_sediment.html'>Get_Af_sediment</a> 
+    
+  </h3></div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+         
+    
+    <h3>
+public pure function <a href='../proc/get_af_sediment.html'>Get_Af_sediment</a>(Me, S) result(Af_sediment)
+    
+    
+	 
+</h3>
+    
+
+
+
+
+
+
+
+<p>return available capacity for fine sediment of a specified size class</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/bedsediment.html'>BedSediment</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>Me</strong></td><td><p>the BedSediment instance</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>S</strong></td><td><p>size class</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=dp)
+  </small></h4>
+  <p>return value</p>
+    
+
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-cf_sediment"></span><h3>procedure, public :: <strong>Cf_sediment</strong>  => <a href='../proc/get_cf_sediment.html'>Get_Cf_sediment</a> 
+    
+  </h3></div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+         
+    
+    <h3>
+public pure function <a href='../proc/get_cf_sediment.html'>Get_Cf_sediment</a>(Me, S) result(Cf_sediment)
+    
+    
+	 
+</h3>
+    
+
+
+
+
+
+
+
+<p>return capacity for fine sediment of a specified size class</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/bedsediment.html'>BedSediment</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>Me</strong></td><td><p>the BedSediment instance</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>S</strong></td><td><p>size class</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=dp)
+  </small></h4>
+  <p>return value</p>
+    
+
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-aw_sediment"></span><h3>procedure, public :: <strong>Aw_sediment</strong>  => <a href='../proc/get_aw_sediment.html'>Get_Aw_sediment</a> 
+    
+  </h3></div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+         
+    
+    <h3>
+public pure function <a href='../proc/get_aw_sediment.html'>Get_Aw_sediment</a>(Me, S) result(Aw_sediment)
+    
+    
+	 
+</h3>
+    
+
+
+
+
+
+
+
+<p>return available capacity for water associated with a specified size class</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/bedsediment.html'>BedSediment</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>Me</strong></td><td><p>the BedSediment instance</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>S</strong></td><td><p>size class</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=dp)
+  </small></h4>
+  <p>return value</p>
+    
+
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-cw_sediment"></span><h3>procedure, public :: <strong>Cw_sediment</strong>  => <a href='../proc/get_cw_sediment.html'>Get_Cw_sediment</a> 
+    
+  </h3></div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+         
+    
+    <h3>
+public pure function <a href='../proc/get_cw_sediment.html'>Get_Cw_sediment</a>(Me, S) result(Cw_sediment)
+    
+    
+	 
+</h3>
+    
+
+
+
+
+
+
+
+<p>return capacity for water associated with a specified size class</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/bedsediment.html'>BedSediment</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>Me</strong></td><td><p>the BedSediment instance</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>S</strong></td><td><p>size class</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=dp)
+  </small></h4>
+  <p>return value</p>
+    
+
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-mf_sediment"></span><h3>procedure, public :: <strong>Mf_sediment</strong>  => <a href='../proc/get_mf_sediment.html'>Get_Mf_sediment</a> 
+    
+  </h3></div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+         
+    
+    <h3>
+public pure function <a href='../proc/get_mf_sediment.html'>Get_Mf_sediment</a>(Me, S) result(Mf_sediment)
+    
+    
+	 
+</h3>
+    
+
+
+
+
+
+
+
+<p>return fine sediment mass in a specified size class</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/bedsediment.html'>BedSediment</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>Me</strong></td><td><p>the BedSediment instance</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>S</strong></td><td><p>size class</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=dp)
+  </small></h4>
+  <p>return value</p>
+    
+
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-mf_sed_all"></span><h3>procedure, public :: <strong>Mf_sed_all</strong>  => <a href='../proc/get_mf_sed_all.html'>Get_Mf_sed_all</a> 
+    
+  </h3></div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+         
+    
+    <h3>
+public pure function <a href='../proc/get_mf_sed_all.html'>Get_Mf_sed_all</a>(Me, S) result(Mf_sed_all)
+    
+    
+	 
+</h3>
+    
+
+
+
+
+
+
+
+<p>return fine sediment mass for all size classes</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/bedsediment.html'>BedSediment</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>Me</strong></td><td><p>the BedSediment instance</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>S</strong></td><td><p>size class</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=dp)
+  </small></h4>
+  <p>return value</p>
+    
+
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+    </section>
+    
+    
+    
+    
+    </div>
+  </div>
+
+  <section class="visible-xs visible-sm hidden-md">
+    <hr>
+    
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#alltypes-1">All Derived Types</a></h3></div>
+  <div id="alltypes-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../type/bedsediment.html">BedSediment</a>
+      
+      <a class="list-group-item" href="../type/bedsediment1.html">BedSediment1</a>
+      
+      <a class="list-group-item" href="../type/bedsediment2.html">BedSediment2</a>
+      
+      <a class="list-group-item" href="../type/bedsedimentlayer.html">BedSedimentLayer</a>
+      
+      <a class="list-group-item" href="../type/bedsedimentlayer1.html">BedSedimentLayer1</a>
+      
+      <a class="list-group-item" href="../type/bedsedimentlayerelement.html">BedSedimentLayerElement</a>
+      
+      <a class="list-group-item" href="../type/biota.html">Biota</a>
+      
+      <a class="list-group-item" href="../type/constants.html">Constants</a>
+      
+      <a class="list-group-item" href="../type/database.html">Database</a>
+      
+      <a class="list-group-item" href="../type/diffusesource.html">DiffuseSource</a>
+      
+      <a class="list-group-item" href="../type/diffusesourceelement.html">DiffuseSourceElement</a>
+      
+      <a class="list-group-item" href="../type/environment.html">Environment</a>
+      
+      <a class="list-group-item" href="../type/environment1.html">Environment1</a>
+      
+      <a class="list-group-item" href="../type/finesediment.html">FineSediment</a>
+      
+      <a class="list-group-item" href="../type/finesediment1.html">FineSediment1</a>
+      
+      <a class="list-group-item" href="../type/finesedimentelement.html">FineSedimentElement</a>
+      
+      <a class="list-group-item" href="../type/gridcell.html">GridCell</a>
+      
+      <a class="list-group-item" href="../type/gridcell1.html">GridCell1</a>
+      
+      <a class="list-group-item" href="../type/gridcellelement.html">GridCellElement</a>
+      
+      <a class="list-group-item" href="../type/objbiota1.html">objBiota1</a>
+      
+      <a class="list-group-item" href="../type/objbiota2.html">objBiota2</a>
+      
+      <a class="list-group-item" href="../type/objreactor1.html">objReactor1</a>
+      
+      <a class="list-group-item" href="../type/objreactor2.html">objReactor2</a>
+      
+      <a class="list-group-item" href="../type/pointsource.html">PointSource</a>
+      
+      <a class="list-group-item" href="../type/pointsourceelement.html">PointSourceElement</a>
+      
+      <a class="list-group-item" href="../type/reactor.html">Reactor</a>
+      
+      <a class="list-group-item" href="../type/riverreach.html">RiverReach</a>
+      
+      <a class="list-group-item" href="../type/riverreach1.html">RiverReach1</a>
+      
+      <a class="list-group-item" href="../type/riverreachelement.html">RiverReachElement</a>
+      
+      <a class="list-group-item" href="../type/routingref.html">RoutingRef</a>
+      
+      <a class="list-group-item" href="../type/soillayer.html">SoilLayer</a>
+      
+      <a class="list-group-item" href="../type/soillayerelement.html">SoilLayerElement</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html">SoilProfile</a>
+      
+      <a class="list-group-item" href="../type/soilprofile1.html">SoilProfile1</a>
+      
+      <a class="list-group-item" href="../type/soilprofileelement.html">SoilProfileElement</a>
+      
+      <a class="list-group-item" href="../type/subriver.html">SubRiver</a>
+      
+      <a class="list-group-item" href="../type/subriver1.html">SubRiver1</a>
+      
+      <a class="list-group-item" href="../type/subriverelement.html">SubRiverElement</a>
+      
+      <a class="list-group-item" href="../type/subriverpointer.html">SubRiverPointer</a>
+      
+    </div>
+  </div>
+</div>
+
+
+  </section>
+
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2017 </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> NanoFASE was developed by CEH</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': { 
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>
