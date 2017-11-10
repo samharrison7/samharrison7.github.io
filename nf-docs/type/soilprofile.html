@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	 <meta name="description" content="Model of the environmental fate of engineered nanoparticles.">
+    
+    <meta name="author" content="CEH" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>SoilProfile &ndash; NanoFASE </title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link href="../css/user.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">NanoFASE </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+				
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+		 aria-expanded="false">Contents <span class="caret"></span></a>
+	      <ul class="dropdown-menu">
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+				
+				
+            <li><a href="../lists/modules.html">Modules</a></li>
+				
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+				
+				
+            <li><a href="../lists/absint.html">Abstract Interfaces</a></li>
+								
+            <li><a href="../lists/types.html">Derived Types</a></li>
+				
+				
+            <li><a href="../program/main.html">Program</a></li>
+	    
+            </ul>
+            </li>
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/absint.html">Abstract Interfaces</a></li>
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/main.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>SoilProfile
+    <small>Derived Type</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+	  data-placement="bottom" data-html="true"
+	  title="<p> 8.6% of total for derived types.</p>Including implementation: 36 statements,  1.6% of total for derived types.">36 statements</a>
+     </li> 
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/spcSoilProfile.f08"> Source File</a></li>
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+     <li><a href='../sourcefile/spcsoilprofile.f08.html'>spcSoilProfile.f08</a></li>
+  
+     <li><a href='../module/spcsoilprofile.html'>spcSoilProfile</a></li>
+  
+     <li class="active">SoilProfile</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-ref%7E2">ref</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-x">x</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-y">y</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-p">p</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-ncgroup">ncGroup</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-colsoillayers">colSoilLayers</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-nsoillayers">nSoilLayers</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-qrunoff">Qrunoff</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-slope">slope</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-n_river%7E2">n_river</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-area">area</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_c">usle_C</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_k">usle_K</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_ls">usle_LS</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_p">usle_P</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_cfrg">usle_CFRG</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_alpha_half">usle_alpha_half</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_area_hru">usle_area_hru</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_area_sb">usle_area_sb</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_l_sb">usle_L_sb</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_n_sb">usle_n_sb</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_slp_sb">usle_slp_sb</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_slp_ch">usle_slp_ch</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_l_ch">usle_L_ch</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-rusle2015_erodedsediment">rusle2015_erodedSediment</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-erodedsediment">erodedSediment</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-distributionsediment">distributionSediment</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#boundprocs-0">Type-Bound Procedures</a></h3></div>
+  <div id="boundprocs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../type/soilprofile.html#boundprocedure-create%7E3">create</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#boundprocedure-destroy%7E4">destroy</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#boundprocedure-update%7E3">update</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#boundprocedure-erode%7E2">erode</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#boundprocedure-imposesizedistribution%7E2">imposeSizeDistribution</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#boundprocedure-parseinputdata%7E2">parseInputData</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+  <hr>
+  
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#alltypes-0">All Derived Types</a></h3></div>
+  <div id="alltypes-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../type/bedsediment.html">BedSediment</a>
+      
+      <a class="list-group-item" href="../type/bedsediment1.html">BedSediment1</a>
+      
+      <a class="list-group-item" href="../type/bedsediment2.html">BedSediment2</a>
+      
+      <a class="list-group-item" href="../type/bedsedimentlayer.html">BedSedimentLayer</a>
+      
+      <a class="list-group-item" href="../type/bedsedimentlayer1.html">BedSedimentLayer1</a>
+      
+      <a class="list-group-item" href="../type/bedsedimentlayerelement.html">BedSedimentLayerElement</a>
+      
+      <a class="list-group-item" href="../type/biota.html">Biota</a>
+      
+      <a class="list-group-item" href="../type/constants.html">Constants</a>
+      
+      <a class="list-group-item" href="../type/database.html">Database</a>
+      
+      <a class="list-group-item" href="../type/diffusesource.html">DiffuseSource</a>
+      
+      <a class="list-group-item" href="../type/diffusesourceelement.html">DiffuseSourceElement</a>
+      
+      <a class="list-group-item" href="../type/environment.html">Environment</a>
+      
+      <a class="list-group-item" href="../type/environment1.html">Environment1</a>
+      
+      <a class="list-group-item" href="../type/finesediment.html">FineSediment</a>
+      
+      <a class="list-group-item" href="../type/finesediment1.html">FineSediment1</a>
+      
+      <a class="list-group-item" href="../type/finesedimentelement.html">FineSedimentElement</a>
+      
+      <a class="list-group-item" href="../type/gridcell.html">GridCell</a>
+      
+      <a class="list-group-item" href="../type/gridcell1.html">GridCell1</a>
+      
+      <a class="list-group-item" href="../type/gridcellelement.html">GridCellElement</a>
+      
+      <a class="list-group-item" href="../type/objbiota1.html">objBiota1</a>
+      
+      <a class="list-group-item" href="../type/objbiota2.html">objBiota2</a>
+      
+      <a class="list-group-item" href="../type/objreactor1.html">objReactor1</a>
+      
+      <a class="list-group-item" href="../type/objreactor2.html">objReactor2</a>
+      
+      <a class="list-group-item" href="../type/pointsource.html">PointSource</a>
+      
+      <a class="list-group-item" href="../type/pointsourceelement.html">PointSourceElement</a>
+      
+      <a class="list-group-item" href="../type/reactor.html">Reactor</a>
+      
+      <a class="list-group-item" href="../type/riverreach.html">RiverReach</a>
+      
+      <a class="list-group-item" href="../type/riverreach1.html">RiverReach1</a>
+      
+      <a class="list-group-item" href="../type/riverreachelement.html">RiverReachElement</a>
+      
+      <a class="list-group-item" href="../type/routingref.html">RoutingRef</a>
+      
+      <a class="list-group-item" href="../type/soillayer.html">SoilLayer</a>
+      
+      <a class="list-group-item" href="../type/soillayerelement.html">SoilLayerElement</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html">SoilProfile</a>
+      
+      <a class="list-group-item" href="../type/soilprofile1.html">SoilProfile1</a>
+      
+      <a class="list-group-item" href="../type/soilprofileelement.html">SoilProfileElement</a>
+      
+      <a class="list-group-item" href="../type/subriver.html">SubRiver</a>
+      
+      <a class="list-group-item" href="../type/subriver1.html">SubRiver1</a>
+      
+      <a class="list-group-item" href="../type/subriverelement.html">SubRiverElement</a>
+      
+      <a class="list-group-item" href="../type/subriverpointer.html">SubRiverPointer</a>
+      
+    </div>
+  </div>
+</div>
+
+
+</div>  
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public, abstract :: SoilProfile</h2>
+    
+    
+    
+    
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-ref%7E2">ref</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-x">x</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-y">y</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-p">p</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-ncgroup">ncGroup</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-colsoillayers">colSoilLayers</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-nsoillayers">nSoilLayers</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-qrunoff">Qrunoff</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-slope">slope</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-n_river%7E2">n_river</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-area">area</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_c">usle_C</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_k">usle_K</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_ls">usle_LS</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_p">usle_P</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_cfrg">usle_CFRG</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_alpha_half">usle_alpha_half</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_area_hru">usle_area_hru</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_area_sb">usle_area_sb</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_l_sb">usle_L_sb</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_n_sb">usle_n_sb</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_slp_sb">usle_slp_sb</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_slp_ch">usle_slp_ch</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-usle_l_ch">usle_L_ch</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-rusle2015_erodedsediment">rusle2015_erodedSediment</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-erodedsediment">erodedSediment</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#variable-distributionsediment">distributionSediment</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#boundprocs-1">Type-Bound Procedures</a></h3></div>
+  <div id="boundprocs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../type/soilprofile.html#boundprocedure-create%7E3">create</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#boundprocedure-destroy%7E4">destroy</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#boundprocedure-update%7E3">update</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#boundprocedure-erode%7E2">erode</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#boundprocedure-imposesizedistribution%7E2">imposeSizeDistribution</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html#boundprocedure-parseinputdata%7E2">parseInputData</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+    <section>
+    <h2>Components</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ref%7E2"></span>character(len=256),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ref</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-x"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>x</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-y"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>y</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-p"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>p</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ncgroup"></span>type(NcGroup),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ncGroup</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-colsoillayers"></span>type(SoilLayerElement),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>colSoilLayers</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nsoillayers"></span>type(integer),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nSoilLayers</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-qrunoff"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Qrunoff</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-slope"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>slope</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n_river%7E2"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>n_river</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-area"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>area</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-usle_c"></span>real(kind=dp),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>usle_C</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-usle_k"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>usle_K</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-usle_ls"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>usle_LS</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-usle_p"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>usle_P</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-usle_cfrg"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>usle_CFRG</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-usle_alpha_half"></span>real(kind=dp),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>usle_alpha_half</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-usle_area_hru"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>usle_area_hru</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-usle_area_sb"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>usle_area_sb</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-usle_l_sb"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>usle_L_sb</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-usle_n_sb"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>usle_n_sb</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-usle_slp_sb"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>usle_slp_sb</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-usle_slp_ch"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>usle_slp_ch</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-usle_l_ch"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>usle_L_ch</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rusle2015_erodedsediment"></span>real(kind=dp),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>rusle2015_erodedSediment</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-erodedsediment"></span>real(kind=dp),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>erodedSediment</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-distributionsediment"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>distributionSediment</strong>(:)</td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+     
+    <section>
+    <h2>Type-Bound Procedures</h2>
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-create%7E3"></span><h3>procedure(<a href='../interface/createsoilprofile.html'>createSoilProfile</a>), public, deferred :: <strong>create</strong>  
+    
+  </h3></div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+         
+            
+    
+    <h3>
+function <a href='../interface/createsoilprofile.html'>createSoilProfile</a>(me, x, y, p, slope, n_river, area) result(r)
+    
+    
+	 
+<small>Prototype</small></h3>
+    
+
+
+
+
+
+
+
+<p>Creating the SoilProfile parses input data and fills
+ the corresponding object properties, as well as setting
+ up the contained SoilLayers.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/soilprofile.html'>SoilProfile</a>)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>me</strong></td><td><p>The SoilProfile instance.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>x</strong></td><td><p>Containing GridCell x position</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>y</strong></td><td><p>Containing GridCell y position</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>p</strong></td><td><p>SoilProfile reference</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>slope</strong></td><td><p>Slope of the containing GridCell [m/m]</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n_river</strong></td><td><p>Manning's roughness coefficient for the GridCell's rivers [-]</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>area</strong></td><td><p>The area of the SoilProfile's surface</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>type(Result)
+  </small></h4>
+  <p>Result object to return</p>
+    
+
+         
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-destroy%7E4"></span><h3>procedure(<a href='../interface/destroysoilprofile.html'>destroySoilProfile</a>), public, deferred :: <strong>destroy</strong>  
+    
+  </h3></div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+         
+            
+    
+    <h3>
+function <a href='../interface/destroysoilprofile.html'>destroySoilProfile</a>(me) result(r)
+    
+    
+	 
+<small>Prototype</small></h3>
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/soilprofile.html'>SoilProfile</a>)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>me</strong></td><td><p>The SoilProfile instance</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>type(Result)
+  </small></h4>
+  <p>Result object to return</p>
+    
+
+         
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-update%7E3"></span><h3>procedure(<a href='../interface/updatesoilprofile.html'>updateSoilProfile</a>), public, deferred :: <strong>update</strong>  
+    
+  </h3></div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+         
+            
+    
+    <h3>
+function <a href='../interface/updatesoilprofile.html'>updateSoilProfile</a>(me, t, Qrunoff) result(r)
+    
+    
+	 
+<small>Prototype</small></h3>
+    
+
+
+
+
+
+
+
+<p>Perform the SoilProfile's simulation for one timestep</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/soilprofile.html'>SoilProfile</a>)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>me</strong></td><td><p>This SoilProfile instance</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>t</strong></td><td><p>The current timestep</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>Qrunoff</strong></td><td><p>Runoff generated on this timestep</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>type(Result)
+  </small></h4>
+  <p>Result object to return</p>
+    
+
+         
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-erode%7E2"></span><h3>procedure(<a href='../interface/erodesoilprofile.html'>erodeSoilProfile</a>), public, deferred :: <strong>erode</strong>  
+    
+  </h3></div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+         
+            
+    
+    <h3>
+function <a href='../interface/erodesoilprofile.html'>erodeSoilProfile</a>(me, t) result(r)
+    
+    
+	 
+<small>Prototype</small></h3>
+    
+
+
+
+
+
+
+
+<p>Erode soil for the current timestep</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/soilprofile.html'>SoilProfile</a>)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>me</strong></td><td><p>This SoilProfile instance</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>t</strong></td><td><p>The current timestep</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>type(Result)
+  </small></h4>
+  <p>Result object to return</p>
+    
+
+         
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-imposesizedistribution%7E2"></span><h3>procedure(<a href='../interface/imposesizedistributionsoilprofile.html'>imposeSizeDistributionSoilProfile</a>), public, deferred :: <strong>imposeSizeDistribution</strong>  
+    
+  </h3></div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+         
+            
+    
+    <h3>
+function <a href='../interface/imposesizedistributionsoilprofile.html'>imposeSizeDistributionSoilProfile</a>(me, mass) result(distribution)
+    
+    
+	 
+<small>Prototype</small></h3>
+    
+
+
+
+
+
+
+
+<p>Impose a size class distribution on a total mass to split it up
+ into separate size classes. If a size distribution has been specified
+ for this SoilProfile, use that, otherwise, use the global size distribution.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/soilprofile.html'>SoilProfile</a>)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>me</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>mass</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=dp)
+  (C%nSizeClassesSpm)</small></h4>
+  
+    
+
+         
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-parseinputdata%7E2"></span><h3>procedure(<a href='../interface/parseinputdatasoilprofile.html'>parseInputDataSoilProfile</a>), public, deferred :: <strong>parseInputData</strong>  
+    
+  </h3></div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+         
+            
+    
+    <h3>
+function <a href='../interface/parseinputdatasoilprofile.html'>parseInputDataSoilProfile</a>(me) result(r)
+    
+    
+	 
+<small>Prototype</small></h3>
+    
+
+
+
+
+
+
+
+<p>Parses the input data for the SoilProfile from the data file</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/soilprofile.html'>SoilProfile</a>)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>me</strong></td><td><p>This SoilProfile instance</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>type(Result)
+  </small></h4>
+  <p>Result object to return</p>
+    
+
+         
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+    </section>
+    
+    
+    
+    
+    </div>
+  </div>
+
+  <section class="visible-xs visible-sm hidden-md">
+    <hr>
+    
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#alltypes-1">All Derived Types</a></h3></div>
+  <div id="alltypes-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../type/bedsediment.html">BedSediment</a>
+      
+      <a class="list-group-item" href="../type/bedsediment1.html">BedSediment1</a>
+      
+      <a class="list-group-item" href="../type/bedsediment2.html">BedSediment2</a>
+      
+      <a class="list-group-item" href="../type/bedsedimentlayer.html">BedSedimentLayer</a>
+      
+      <a class="list-group-item" href="../type/bedsedimentlayer1.html">BedSedimentLayer1</a>
+      
+      <a class="list-group-item" href="../type/bedsedimentlayerelement.html">BedSedimentLayerElement</a>
+      
+      <a class="list-group-item" href="../type/biota.html">Biota</a>
+      
+      <a class="list-group-item" href="../type/constants.html">Constants</a>
+      
+      <a class="list-group-item" href="../type/database.html">Database</a>
+      
+      <a class="list-group-item" href="../type/diffusesource.html">DiffuseSource</a>
+      
+      <a class="list-group-item" href="../type/diffusesourceelement.html">DiffuseSourceElement</a>
+      
+      <a class="list-group-item" href="../type/environment.html">Environment</a>
+      
+      <a class="list-group-item" href="../type/environment1.html">Environment1</a>
+      
+      <a class="list-group-item" href="../type/finesediment.html">FineSediment</a>
+      
+      <a class="list-group-item" href="../type/finesediment1.html">FineSediment1</a>
+      
+      <a class="list-group-item" href="../type/finesedimentelement.html">FineSedimentElement</a>
+      
+      <a class="list-group-item" href="../type/gridcell.html">GridCell</a>
+      
+      <a class="list-group-item" href="../type/gridcell1.html">GridCell1</a>
+      
+      <a class="list-group-item" href="../type/gridcellelement.html">GridCellElement</a>
+      
+      <a class="list-group-item" href="../type/objbiota1.html">objBiota1</a>
+      
+      <a class="list-group-item" href="../type/objbiota2.html">objBiota2</a>
+      
+      <a class="list-group-item" href="../type/objreactor1.html">objReactor1</a>
+      
+      <a class="list-group-item" href="../type/objreactor2.html">objReactor2</a>
+      
+      <a class="list-group-item" href="../type/pointsource.html">PointSource</a>
+      
+      <a class="list-group-item" href="../type/pointsourceelement.html">PointSourceElement</a>
+      
+      <a class="list-group-item" href="../type/reactor.html">Reactor</a>
+      
+      <a class="list-group-item" href="../type/riverreach.html">RiverReach</a>
+      
+      <a class="list-group-item" href="../type/riverreach1.html">RiverReach1</a>
+      
+      <a class="list-group-item" href="../type/riverreachelement.html">RiverReachElement</a>
+      
+      <a class="list-group-item" href="../type/routingref.html">RoutingRef</a>
+      
+      <a class="list-group-item" href="../type/soillayer.html">SoilLayer</a>
+      
+      <a class="list-group-item" href="../type/soillayerelement.html">SoilLayerElement</a>
+      
+      <a class="list-group-item" href="../type/soilprofile.html">SoilProfile</a>
+      
+      <a class="list-group-item" href="../type/soilprofile1.html">SoilProfile1</a>
+      
+      <a class="list-group-item" href="../type/soilprofileelement.html">SoilProfileElement</a>
+      
+      <a class="list-group-item" href="../type/subriver.html">SubRiver</a>
+      
+      <a class="list-group-item" href="../type/subriver1.html">SubRiver1</a>
+      
+      <a class="list-group-item" href="../type/subriverelement.html">SubRiverElement</a>
+      
+      <a class="list-group-item" href="../type/subriverpointer.html">SubRiverPointer</a>
+      
+    </div>
+  </div>
+</div>
+
+
+  </section>
+
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2017 </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> NanoFASE was developed by CEH</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': { 
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>
